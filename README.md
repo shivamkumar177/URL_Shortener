@@ -6,4 +6,4 @@ Simple Flask app which converts a long url to short url
 
 https://urlshortenerflask.herokuapp.com/
 
-![Alt text](/screenshot/Sc(6).png?raw=true "Home page pic")
+![Alt text](/screenshot/Sc(1).png?raw=true "Home page pic")
