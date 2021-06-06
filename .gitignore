@@ -1,4 +1,6 @@
 env
+.vscode
 *.pyc
 .DS_Store
-.vscode/*
+urls.db
+*
