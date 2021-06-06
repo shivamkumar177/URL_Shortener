@@ -5,9 +5,11 @@
     <div class="form-container">
     <form action="#" , method="post">
         <label for="url">Enter URL:</label>
-        <input type="url" name="nm" id="url" placeholder="https://example.com" pattern="https://.*" required>
+        <input type="url" name="nm" id="url" placeholder="https://example.com" pattern="https://.*" required size="100">
         <br>
-        <input type="submit" value="submit" class="btn btn-dark" id="submit-btn">
+        <input type="submit" value="Submit" class="btn btn-dark" id="submit-btn">
+        <a class="btn btn-dark" href="/all_urls" role="button">All Urls</a>
+
     </form>
     </div>
 {% endblock %}

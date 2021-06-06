@@ -62,5 +62,16 @@ def redirection(short_url):
     else:
         return f'<h1>URL dosen\'t Exist</h1>'
 
+@app.route('/all_urls')
+def display_all():
+    return render_template('allurls.html',val=Urls.query.all())
+
+@app.route('/delete/<int:id_>')    
+def deleteurl(id_):
+    url_to_remove = Urls.query.filter_by(id_=id_).first()
+    db.session.delete(url_to_remove)
+    db.session.commit()
+    return redirect("/all_urls")
+
 if __name__ == "__main__":
     app.run(debug=True)

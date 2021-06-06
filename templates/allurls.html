@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+{%block title%} all urls {% endblock %}
+
+{% block content %}
+<table class="table">
+    <thead>
+        <tr>
+            <th scope="col">S.No.</th>
+            <th scope="col">Long</th>
+            <th scope="col">Short</th>
+            <th scope="col">Action</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for i in val %}
+        <tr>
+            <td scope="row">{{ loop.index }}</td>
+            <td>{{ i.long }}</td>
+            <td>https://urlshortenerflask.herokuapp.com/{{ i.short }}</td>
+            <td><a href="/delete/{{i.id_}}" type="button" class="btn btn-outline-dark btn-sm mx-1">Delete</button></td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+
+<a href="/" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">Home</a>
+
+{% endblock %}
